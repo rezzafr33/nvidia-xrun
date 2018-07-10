@@ -1,0 +1,16 @@
+#!/bin/bash
+
+state=$1
+
+bbswitch() {
+  case "$1" in
+    ON|OFF)
+      tee /proc/acpi/bbswitch <<<$1
+      ;;
+    *)
+      echo $"Usage: $0 {OFF|ON}"
+      exit 1
+  esac
+}
+
+bbswitch $state
