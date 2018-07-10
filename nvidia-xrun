@@ -75,7 +75,7 @@ if ! [ -f /proc/acpi/bbswitch ]
 then
   execute "sudo modprobe bbswitch"
 fi
-execute "sudo tee /proc/acpi/bbswitch <<<ON"
+execute "sudo bbswitch ON"
 
 # ---------- LOADING MODULES ----------
 echo 'Loading nvidia module'
@@ -104,7 +104,7 @@ execute "sudo rmmod nvidia"
 if [ -f /proc/acpi/bbswitch ] 
 then
   echo 'Turning off nvidia GPU'
-  execute "sudo tee /proc/acpi/bbswitch <<<OFF"
+  execute "sudo bbswitch OFF"
 
   echo -n 'Current state of nvidia GPU: '
   execute "cat /proc/acpi/bbswitch"

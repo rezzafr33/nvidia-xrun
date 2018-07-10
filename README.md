@@ -13,6 +13,7 @@ Currently sudo is required as the script needs to wake up GPU, modprobe the nvid
 ## Structure
 * **nvidia-xrun** - uses following dir structure:
 * **/usr/bin/nvidia-xrun** - the executable script
+* **/usr/bin/bbswitch** - the wrapper script for bbswitch ON/OFF
 * **/etc/X11/nvidia-xorg.conf** - the main X confing file
 * **/etc/X11/xinit/nvidia-xinitrc** - xinitrc config file. Contains the setting of provider output source
 * **/etc/X11/xinit/nvidia-xinitrc.d** - custom xinitrc scripts directory
